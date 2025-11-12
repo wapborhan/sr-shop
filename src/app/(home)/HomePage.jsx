@@ -11,17 +11,13 @@ const HomePage = () => {
   return (
     <>
       <Header />
-      <div class="mn-main-content">
-        <div className="row">
-          <div className="col-xxl-12">
-            {/* <Hero /> */}
-            <Categories />
-            <FlashSale />
-            <Services />
-            <Banner />
-            <NewArrival />
-          </div>
-        </div>
+      <Hero />
+      <div class="mn-main-contents container">
+        <Categories />
+        <FlashSale />
+        <Services />
+        <Banner />
+        <NewArrival />
       </div>
       <Footer />
     </>

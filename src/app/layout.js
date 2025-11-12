@@ -2,6 +2,7 @@ import { Poppins, Quicksand } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "swiper/css";
 import "@/assets/css/style.css";
+import "@/assets/css/vendor/remixicon.css";
 import AOSInit from "@/components/AOSInit";
 
 const poppins = Poppins({

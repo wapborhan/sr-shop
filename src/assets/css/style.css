@@ -5203,7 +5203,7 @@ button.btn-close.qty_close {
 
 /** Hero css **/
 .mn-hero {
-  border-radius: 15px;
+  /* border-radius: 15px; */
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5218,8 +5218,8 @@ button.btn-close.qty_close {
   flex-wrap: wrap;
 }
 
-.mn-hero .owl-nav button.owl-prev,
-.mn-hero .owl-nav button.owl-next {
+.mn-hero .swiper-button-prev,
+.mn-hero .swiper-button-next {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -5238,71 +5238,82 @@ button.btn-close.qty_close {
   z-index: 5;
 }
 
-.mn-hero .owl-nav button.owl-prev:before,
-.mn-hero .owl-nav button.owl-next:before {
-  font-family: "remixicon";
+.mn-hero .swiper-button-prev:before,
+.mn-hero .swiper-button-next:before {
+  /* font-family: "remixicon"; */
   font-size: 30px;
   line-height: 42px;
   outline: 0;
 }
 
-.mn-hero .owl-nav button.owl-prev span,
-.mn-hero .owl-nav button.owl-next span {
+.mn-hero .swiper-button-prev svg,
+.mn-hero .swiper-button-next svg {
+  width: 40% !important;
+}
+
+
+.mn-hero .swiper-button-prev span,
+.mn-hero .swiper-button-next span {
   display: none;
 }
 
-.mn-hero .owl-nav button.owl-prev {
+.mn-hero .swiper-button-prev {
   border-radius: 0 20px 20px 0;
-  left: 0;
+  left: 0 !important;
 }
 
-.mn-hero .owl-nav button.owl-prev:before {
+/* .mn-hero .swiper-button-prev:before {
   content: "\ea64";
   margin-left: -7px;
   font-family: "remixicon";
   font-size: 30px;
   outline: 0;
-}
+} */
 
-.mn-hero .owl-nav button.owl-prev:after {
+.mn-hero .swiper-button-prev:after {
   content: "";
   width: 18px;
   height: 70px;
   position: absolute;
   top: 50%;
   left: 0;
-  background-image: url("/img/hero/shape-1.png");
+  background-image: url("/assets/img/hero/shape-1.png");
   background-repeat: no-repeat;
   background-size: 100%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
-.mn-hero .owl-nav button.owl-next {
+.mn-hero .swiper-button-next {
   border-radius: 20px 0px 0px 20px;
-  right: 0;
+  right: 0 !important;
 }
 
-.mn-hero .owl-nav button.owl-next:before {
-  content: "\ea6e";
-  margin-right: -7px;
-}
+/* .mn-hero .swiper-button-next::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("data:image/svg+xml;utf8,<svg stroke='currentColor' fill='currentColor' stroke-width='0' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path fill='none' d='M0 0h24v24H0V0z'></path><path d='M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z'></path></svg>") no-repeat center;
+  background-size: contain;
+  color: currentColor;
+} */
 
-.mn-hero .owl-nav button.owl-next:after {
+.mn-hero .swiper-button-next:after {
   content: "";
   width: 18px;
   height: 70px;
   position: absolute;
   top: 50%;
   right: 0;
-  background-image: url("/img/hero/shape-1.png");
+  background-image: url("/assets/img/hero/shape-1.png");
   background-repeat: no-repeat;
   background-size: 100%;
   -webkit-transform: translateY(-50%) rotate(180deg);
   transform: translateY(-50%) rotate(180deg);
 }
 
-.mn-hero .owl-dots {
+.mn-hero .swiper-pagination {
   width: auto;
   padding: 12px 15px 0 15px;
   background-color: #f1f4f7;
@@ -5315,37 +5326,38 @@ button.btn-close.qty_close {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   border-radius: 20px 20px 0px 0px;
+  z-index: 9;
 }
 
-.mn-hero .owl-dots:before {
+.mn-hero .swiper-pagination:before {
   content: "";
   width: 18px;
   height: 15px;
   position: absolute;
-  left: -15px;
-  bottom: -6px;
-  background-image: url("/img/hero/shape-2.png");
+  left: -16px;
+  bottom: -7px;
+  background-image: url("/assets/img/hero/shape-2.png");
   background-repeat: no-repeat;
   background-size: 100%;
   -webkit-transform: translateY(-50%) rotate(270deg);
   transform: translateY(-50%) rotate(270deg);
 }
 
-.mn-hero .owl-dots:after {
+.mn-hero .swiper-pagination:after {
   content: "";
   width: 18px;
   height: 15px;
   position: absolute;
   right: -17px;
   bottom: -8px;
-  background-image: url("/img/hero/shape-2.png");
+  background-image: url("/assets/img/hero/shape-2.png");
   background-repeat: no-repeat;
   background-size: 100%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
-.mn-hero .owl-dots .owl-dot {
+.mn-hero .swiper-pagination .swiper-pagination-bullet {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   width: 12px;
@@ -5357,7 +5369,7 @@ button.btn-close.qty_close {
   border-radius: 10px;
 }
 
-.mn-hero .owl-dots .owl-dot.active {
+.mn-hero .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   width: 25px;
   background-color: #3a4ee5 !important;
   border-color: #3a4ee5;
@@ -5583,7 +5595,7 @@ button.btn-close.qty_close {
 }
 
 @media only screen and (max-width: 480px) {
-  .mn-hero .owl-dots {
+  .mn-hero .swiper-pagination {
     display: none;
   }
 
@@ -5850,16 +5862,16 @@ button.btn-close.qty_close {
   font-family: "remixicon";
 }
 
-.mn-product .owl-dots,
-.mn-related .owl-dots {
+.mn-product .swiper-pagination,
+.mn-related .swiper-pagination {
   margin: -3px;
   position: absolute;
   top: -57px;
   right: 0;
 }
 
-.mn-product .owl-dots button,
-.mn-related .owl-dots button {
+.mn-product .swiper-pagination button,
+.mn-related .swiper-pagination button {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   width: 12px;
@@ -5869,8 +5881,8 @@ button.btn-close.qty_close {
   border-radius: 15px;
 }
 
-.mn-product .owl-dots button.active,
-.mn-related .owl-dots button.active {
+.mn-product .swiper-pagination button.active,
+.mn-related .swiper-pagination button.active {
   width: 25px;
   border-color: #3a4ee5;
   background-color: #3a4ee5;
@@ -6494,7 +6506,7 @@ button.btn-close.qty_close {
   flex-wrap: wrap;
 }
 
-.mn-modern-banner .owl-dots {
+.mn-modern-banner .swiper-pagination {
   background-color: #f1f4f7;
   padding: 10px 10px 0 10px;
   position: absolute;
@@ -6502,7 +6514,7 @@ button.btn-close.qty_close {
   right: 392px;
 }
 
-.mn-modern-banner .owl-dots button {
+.mn-modern-banner .swiper-pagination button {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   width: 12px;
@@ -6512,7 +6524,7 @@ button.btn-close.qty_close {
   border-radius: 15px;
 }
 
-.mn-modern-banner .owl-dots button.active {
+.mn-modern-banner .swiper-pagination button.active {
   width: 25px;
   border-color: #3a4ee5;
   background-color: #3a4ee5;
@@ -6681,7 +6693,7 @@ button.btn-close.qty_close {
 }
 
 @media screen and (max-width: 1399px) {
-  .mn-modern-banner .owl-dots {
+  .mn-modern-banner .swiper-pagination {
     right: 375px;
   }
 
@@ -6695,7 +6707,7 @@ button.btn-close.qty_close {
 }
 
 @media screen and (max-width: 1199px) {
-  .mn-modern-banner .owl-dots {
+  .mn-modern-banner .swiper-pagination {
     right: 315px;
   }
 
@@ -6724,7 +6736,7 @@ button.btn-close.qty_close {
     border-bottom-right-radius: 500px;
   }
 
-  .mn-modern-banner .owl-dots {
+  .mn-modern-banner .swiper-pagination {
     display: none;
   }
 
@@ -7061,16 +7073,16 @@ button.btn-close.qty_close {
   font-family: "remixicon";
 }
 
-.mn-blog .owl-dots,
-.mn-blog-section .owl-dots {
+.mn-blog .swiper-pagination,
+.mn-blog-section .swiper-pagination {
   margin: -3px;
   position: absolute;
   top: -57px;
   right: 0;
 }
 
-.mn-blog .owl-dots button,
-.mn-blog-section .owl-dots button {
+.mn-blog .swiper-pagination button,
+.mn-blog-section .swiper-pagination button {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   width: 12px;
@@ -7080,8 +7092,8 @@ button.btn-close.qty_close {
   border-radius: 15px;
 }
 
-.mn-blog .owl-dots button.active,
-.mn-blog-section .owl-dots button.active {
+.mn-blog .swiper-pagination button.active,
+.mn-blog-section .swiper-pagination button.active {
   width: 25px;
   border-color: #3a4ee5;
   background-color: #3a4ee5;
@@ -7888,14 +7900,14 @@ button.btn-close.qty_close {
 }
 
 /* Team Section CSS */
-.mn-team-section .owl-dots {
+.mn-team-section .swiper-pagination {
   margin: -3px;
   position: absolute;
   top: -57px;
   right: 0;
 }
 
-.mn-team-section .owl-dots button {
+.mn-team-section .swiper-pagination button {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   width: 12px;
@@ -7905,7 +7917,7 @@ button.btn-close.qty_close {
   border-radius: 15px;
 }
 
-.mn-team-section .owl-dots button.active {
+.mn-team-section .swiper-pagination button.active {
   width: 25px;
   border-color: #3a4ee5;
   background-color: #3a4ee5;

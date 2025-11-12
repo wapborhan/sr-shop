@@ -1,28 +1,68 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
+import "swiper/css/navigation";
+import "swiper/css/effect-creative";
+import "swiper/css/effect-fade";
 
 const Hero = () => {
+  const interleaveOffset = 0.5;
+
+  const handleProgress = (swiper) => {
+    swiper.slides.forEach((slide) => {
+      const slideProgress = slide.progress;
+      const innerOffset = swiper.width * interleaveOffset;
+      const innerTranslate = slideProgress * innerOffset;
+      const inner = slide.querySelector(".slide-inner");
+      if (inner) {
+        inner.style.transform = `translate3d(${innerTranslate}px, 0, 0)`;
+      }
+    });
+  };
+
+  const handleTouchStart = (swiper) => {
+    swiper.slides.forEach((slide) => {
+      slide.style.transition = "";
+    });
+  };
+
+  const handleSetTransition = (swiper, speed) => {
+    swiper.slides.forEach((slide) => {
+      slide.style.transition = `${speed}ms`;
+      const inner = slide.querySelector(".slide-inner");
+      if (inner) {
+        inner.style.transition = `${speed}ms`;
+      }
+    });
+  };
   return (
-    <section class="mn-hero swiper-container m-b-15">
+    <section className="mn-hero swiper-container m-b-15">
       <Swiper
-        class="mn-hero-slider owl-carousel"
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        className="mn-hero-slider"
+        modules={[Navigation, Pagination, Autoplay, A11y]}
         slidesPerView={1}
-        navigation
+        loop={true}
+        speed={1000}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        parallax={true}
         pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
+        navigation
+        watchSlidesProgress={true}
+        onProgress={handleProgress}
+        onTouchStart={handleTouchStart}
+        onSetTransition={handleSetTransition}
       >
         <SwiperSlide
-          class="mn-hero-slide swiper-slide slide-1"
+          className="mn-hero-slide swiper-slide slide-1"
           style={{
             backgroundImage: `url(assets/img/hero/1.jpg)`,
           }}
         >
-          <div class="mn-hero-detail">
-            <p class="label">
+          <div className="mn-hero-detail">
+            <p className="label">
               <span>
                 50%
                 <br />
@@ -34,14 +74,14 @@ const Hero = () => {
               for women's
             </h1>
             <p>Elevate your every day. Style that speaks volumes.</p>
-            <a href="javascript:void(0)" class="mn-btn-2">
+            <a href="javascript:void(0)" className="mn-btn-2">
               <span>Shop Now</span>
             </a>
           </div>
         </SwiperSlide>
-        <SwiperSlide class="mn-hero-slide swiper-slide slide-2">
-          <div class="mn-hero-detail">
-            <p class="label">
+        <SwiperSlide className="mn-hero-slide swiper-slide slide-2">
+          <div className="mn-hero-detail">
+            <p className="label">
               <span>
                 35%
                 <br />
@@ -53,14 +93,14 @@ const Hero = () => {
               for Men's
             </h2>
             <p>Wear the change. Fashion that feels good.</p>
-            <a href="javascript:void(0)" class="mn-btn-2">
+            <a href="javascript:void(0)" className="mn-btn-2">
               <span>Shop Now</span>
             </a>
           </div>
         </SwiperSlide>
-        <SwiperSlide class="mn-hero-slide swiper-slide slide-3">
-          <div class="mn-hero-detail">
-            <p class="label">
+        <SwiperSlide className="mn-hero-slide swiper-slide slide-3">
+          <div className="mn-hero-detail">
+            <p className="label">
               <span>
                 44%
                 <br />
@@ -72,14 +112,14 @@ const Hero = () => {
               for Children's
             </h2>
             <p>Wear the change. Fashion that feels good.</p>
-            <a href="javascript:void(0)" class="mn-btn-2">
+            <a href="javascript:void(0)" className="mn-btn-2">
               <span>Shop Now</span>
             </a>
           </div>
         </SwiperSlide>
-        <SwiperSlide class="mn-hero-slide swiper-slide slide-4">
-          <div class="mn-hero-detail">
-            <p class="label">
+        <SwiperSlide className="mn-hero-slide swiper-slide slide-4">
+          <div className="mn-hero-detail">
+            <p className="label">
               <span>
                 22%
                 <br />
@@ -91,7 +131,7 @@ const Hero = () => {
               for Women's
             </h2>
             <p>Wear the change. Fashion that feels good.</p>
-            <a href="javascript:void(0)" class="mn-btn-2">
+            <a href="javascript:void(0)" className="mn-btn-2">
               <span>Shop Now</span>
             </a>
           </div>

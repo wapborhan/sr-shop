@@ -6,8 +6,8 @@ import { BsCart3 } from "react-icons/bs";
 const Header = () => {
   return (
     <header>
-      <div className="mn-header">
-        <div className="mn-header-items">
+      <div className="mn-header ">
+        <div className="mn-header-items container">
           <div className="left-header">
             {/* <a href="javascript:void(0)" className="mn-toggle-sidebar">
               <span className="outer-ring">
