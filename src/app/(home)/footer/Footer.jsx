@@ -8,12 +8,12 @@ const Footer = () => {
               <div className="col-sm-12 col-lg-3 mn-footer-cat">
                 <div className="mn-footer-widget mn-footer-company">
                   <img
-                    src="assets/img/logo/logo.png"
+                    src="/assets/img/logo/logo.png"
                     className="mn-footer-logo"
                     alt="footer logo"
                   />
                   <img
-                    src="assets/img/logo/logo-dark.png"
+                    src="/assets/img/logo/logo-dark.png"
                     className="mn-footer-dark-logo"
                     alt="footer logo"
                   />
@@ -24,14 +24,14 @@ const Footer = () => {
                   <div className="mn-app-store">
                     <a href="javascript:void(0)" className="app-img">
                       <img
-                        src="assets/img/footer/android.png"
+                        src="/assets/img/footer/android.png"
                         className="adroid"
                         alt="apple"
                       />
                     </a>
                     <a href="javascript:void(0)" className="app-img">
                       <img
-                        src="assets/img/footer/apple.png"
+                        src="/assets/img/footer/apple.png"
                         className="apple"
                         alt="apple"
                       />
@@ -201,7 +201,7 @@ const Footer = () => {
                 <div className="footer-bottom-right">
                   <div className="footer-bottom-payment d-flex justify-content-center">
                     <div className="payment-link">
-                      <img src="assets/img/footer/payment.png" alt="payment" />
+                      <img src="/assets/img/footer/payment.png" alt="payment" />
                     </div>
                   </div>
                 </div>

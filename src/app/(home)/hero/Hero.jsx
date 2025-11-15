@@ -58,7 +58,7 @@ const Hero = () => {
         <SwiperSlide
           className="mn-hero-slide swiper-slide slide-1"
           style={{
-            backgroundImage: `url(assets/img/hero/1.jpg)`,
+            backgroundImage: `url(/assets/img/hero/1.jpg)`,
           }}
         >
           <div className="mn-hero-detail">

@@ -4,6 +4,7 @@ import "swiper/css";
 import "@/assets/css/style.css";
 import "@/assets/css/vendor/remixicon.css";
 import AOSInit from "@/components/AOSInit";
+import PathProvider from "@/provider/PathProvider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -27,7 +28,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${poppins.variable} ${quicksand.variable}`}>
         <AOSInit />
-        <main className="wrapper sb-default">{children}</main>
+        <PathProvider>
+          <main className="wrapper sb-default">{children}</main>
+        </PathProvider>
       </body>
     </html>
   );

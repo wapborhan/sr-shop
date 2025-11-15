@@ -23,7 +23,7 @@ const Banner = () => {
             <SwiperSlide className="modern-banner">
               <div
                 className="mn-banner-img img-1"
-                style={{ backgroundImage: `url(assets/img/banner/1.jpg)` }}
+                style={{ backgroundImage: `url(/assets/img/banner/1.jpg)` }}
               ></div>
               <div className="mn-banner-contact banner-animation">
                 <div className="inner-banner">
@@ -44,7 +44,7 @@ const Banner = () => {
             <SwiperSlide className="modern-banner">
               <div
                 className="mn-banner-img img-2"
-                style={{ backgroundImage: `url(assets/img/banner/2.jpg)` }}
+                style={{ backgroundImage: `url(/assets/img/banner/2.jpg)` }}
               ></div>
               <div className="mn-banner-contact banner-animation">
                 <div className="inner-banner">

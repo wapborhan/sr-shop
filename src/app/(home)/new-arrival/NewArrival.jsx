@@ -33,12 +33,12 @@ const NewArrival = () => {
               <a href="product-detail.html" className="image">
                 <img
                   className="main-img"
-                  src="assets/img/product/5.jpg"
+                  src="/assets/img/product/5.jpg"
                   alt="product"
                 />
                 <img
                   className="hover-img"
-                  src="assets/img/product/6.jpg"
+                  src="/assets/img/product/6.jpg"
                   alt="product"
                 />
               </a>
@@ -104,13 +104,13 @@ const NewArrival = () => {
                     <a
                       href="#"
                       className="mn-opt-clr-img active"
-                      data-src="assets/img/product/5.jpg"
-                      data-src-hover="assets/img/product/5.jpg"
+                      data-src="/assets/img/product/5.jpg"
+                      data-src-hover="/assets/img/product/5.jpg"
                       data-tooltip="Gray"
                     >
                       <span
                       // style="
-                      //           background-image: url('assets/img/product/bg/5.jpg');
+                      //           background-image: url('/assets/img/product/bg/5.jpg');
                       //         "
                       ></span>
                     </a>
@@ -119,13 +119,13 @@ const NewArrival = () => {
                     <a
                       href="#"
                       className="mn-opt-clr-img"
-                      data-src="assets/img/product/6.jpg"
-                      data-src-hover="assets/img/product/6.jpg"
+                      data-src="/assets/img/product/6.jpg"
+                      data-src-hover="/assets/img/product/6.jpg"
                       data-tooltip="Orange"
                     >
                       <span
                       // style="
-                      //           background-image: url('assets/img/product/bg/6.jpg');
+                      //           background-image: url('/assets/img/product/bg/6.jpg');
                       //         "
                       ></span>
                     </a>
@@ -134,8 +134,8 @@ const NewArrival = () => {
                     <a
                       href="#"
                       className="mn-opt-clr-img"
-                      data-src="assets/img/product/7.jpg"
-                      data-src-hover="assets/img/product/7.jpg"
+                      data-src="/assets/img/product/7.jpg"
+                      data-src-hover="/assets/img/product/7.jpg"
                       data-tooltip="Orange"
                     >
                       {/* <span style="background-color: #e97e70"></span> */}
@@ -145,8 +145,8 @@ const NewArrival = () => {
                     <a
                       href="#"
                       className="mn-opt-clr-img"
-                      data-src="assets/img/product/8.jpg"
-                      data-src-hover="assets/img/product/8.jpg"
+                      data-src="/assets/img/product/8.jpg"
+                      data-src-hover="/assets/img/product/8.jpg"
                       data-tooltip="Orange"
                     >
                       {/* <span style="background-color: #70e98a"></span> */}
@@ -171,12 +171,12 @@ const NewArrival = () => {
               <a href="product-detail.html" className="image">
                 <img
                   className="main-img"
-                  src="assets/img/product/9.jpg"
+                  src="/assets/img/product/9.jpg"
                   alt="product"
                 />
                 <img
                   className="hover-img"
-                  src="assets/img/product/10.jpg"
+                  src="/assets/img/product/10.jpg"
                   alt="product"
                 />
               </a>
@@ -241,8 +241,8 @@ const NewArrival = () => {
                     <a
                       href="#"
                       className="mn-opt-clr-img"
-                      data-src="assets/img/product/9.jpg"
-                      data-src-hover="assets/img/product/9.jpg"
+                      data-src="/assets/img/product/9.jpg"
+                      data-src-hover="/assets/img/product/9.jpg"
                       data-tooltip="Orange"
                     >
                       {/* <span style="background-color: #0e0e0e"></span> */}
@@ -252,8 +252,8 @@ const NewArrival = () => {
                     <a
                       href="#"
                       className="mn-opt-clr-img"
-                      data-src="assets/img/product/10.jpg"
-                      data-src-hover="assets/img/product/10.jpg"
+                      data-src="/assets/img/product/10.jpg"
+                      data-src-hover="/assets/img/product/10.jpg"
                       data-tooltip="Orange"
                     >
                       {/* <span style="background-color: #c54367"></span> */}
@@ -281,12 +281,12 @@ const NewArrival = () => {
               <a href="product-detail.html" className="image">
                 <img
                   className="main-img"
-                  src="assets/img/product/1.jpg"
+                  src="/assets/img/product/1.jpg"
                   alt="product"
                 />
                 <img
                   className="hover-img"
-                  src="assets/img/product/3.jpg"
+                  src="/assets/img/product/3.jpg"
                   alt="product"
                 />
               </a>
@@ -351,8 +351,8 @@ const NewArrival = () => {
                     <a
                       href="#"
                       className="mn-opt-clr-img active"
-                      data-src="assets/img/product/1.jpg"
-                      data-src-hover="assets/img/product/3.jpg"
+                      data-src="/assets/img/product/1.jpg"
+                      data-src-hover="/assets/img/product/3.jpg"
                       data-tooltip="Gray"
                     >
                       {/* <span style="background-color: #f3f3f3"></span> */}
@@ -362,8 +362,8 @@ const NewArrival = () => {
                     <a
                       href="#"
                       className="mn-opt-clr-img"
-                      data-src="assets/img/product/2.jpg"
-                      data-src-hover="assets/img/product/4.jpg"
+                      data-src="/assets/img/product/2.jpg"
+                      data-src-hover="/assets/img/product/4.jpg"
                       data-tooltip="Orange"
                     >
                       {/* <span style="background-color: #e8c2ff"></span> */}
@@ -391,12 +391,12 @@ const NewArrival = () => {
               <a href="product-detail.html" className="image">
                 <img
                   className="main-img"
-                  src="assets/img/product/11.jpg"
+                  src="/assets/img/product/11.jpg"
                   alt="product"
                 />
                 <img
                   className="hover-img"
-                  src="assets/img/product/12.jpg"
+                  src="/assets/img/product/12.jpg"
                   alt="product"
                 />
               </a>
@@ -457,8 +457,8 @@ const NewArrival = () => {
                     <a
                       href="#"
                       className="mn-opt-clr-img"
-                      data-src="assets/img/product/11.jpg"
-                      data-src-hover="assets/img/product/12.jpg"
+                      data-src="/assets/img/product/11.jpg"
+                      data-src-hover="/assets/img/product/12.jpg"
                       data-tooltip="Orange"
                     >
                       {/* <span style="background-color: #f3f3f3"></span> */}
@@ -468,8 +468,8 @@ const NewArrival = () => {
                     <a
                       href="#"
                       className="mn-opt-clr-img"
-                      data-src="assets/img/product/12.jpg"
-                      data-src-hover="assets/img/product/11.jpg"
+                      data-src="/assets/img/product/12.jpg"
+                      data-src-hover="/assets/img/product/11.jpg"
                       data-tooltip="Orange"
                     >
                       {/* <span style="background-color: #242424"></span> */}
@@ -497,12 +497,12 @@ const NewArrival = () => {
               <a href="product-detail.html" className="image">
                 <img
                   className="main-img"
-                  src="assets/img/product/13.jpg"
+                  src="/assets/img/product/13.jpg"
                   alt="product"
                 />
                 <img
                   className="hover-img"
-                  src="assets/img/product/14.jpg"
+                  src="/assets/img/product/14.jpg"
                   alt="product"
                 />
               </a>
@@ -563,8 +563,8 @@ const NewArrival = () => {
                     <a
                       href="#"
                       className="mn-opt-clr-img"
-                      data-src="assets/img/product/13.jpg"
-                      data-src-hover="assets/img/product/14.jpg"
+                      data-src="/assets/img/product/13.jpg"
+                      data-src-hover="/assets/img/product/14.jpg"
                       data-tooltip="Orange"
                     >
                       {/* <span style="background-color: #d48a5b"></span> */}
@@ -574,8 +574,8 @@ const NewArrival = () => {
                     <a
                       href="#"
                       className="mn-opt-clr-img"
-                      data-src="assets/img/product/14.jpg"
-                      data-src-hover="assets/img/product/13.jpg"
+                      data-src="/assets/img/product/14.jpg"
+                      data-src-hover="/assets/img/product/13.jpg"
                       data-tooltip="Orange"
                     >
                       {/* <span style="background-color: #242424"></span> */}
@@ -600,12 +600,12 @@ const NewArrival = () => {
               <a href="product-detail.html" className="image">
                 <img
                   className="main-img"
-                  src="assets/img/product/15.jpg"
+                  src="/assets/img/product/15.jpg"
                   alt="product"
                 />
                 <img
                   className="hover-img"
-                  src="assets/img/product/16.jpg"
+                  src="/assets/img/product/16.jpg"
                   alt="product"
                 />
               </a>
@@ -669,8 +669,8 @@ const NewArrival = () => {
                     <a
                       href="#"
                       className="mn-opt-clr-img"
-                      data-src="assets/img/product/15.jpg"
-                      data-src-hover="assets/img/product/16.jpg"
+                      data-src="/assets/img/product/15.jpg"
+                      data-src-hover="/assets/img/product/16.jpg"
                       data-tooltip="Orange"
                     >
                       {/* <span style="background-color: #b75956"></span> */}
@@ -680,8 +680,8 @@ const NewArrival = () => {
                     <a
                       href="#"
                       className="mn-opt-clr-img"
-                      data-src="assets/img/product/16.jpg"
-                      data-src-hover="assets/img/product/15.jpg"
+                      data-src="/assets/img/product/16.jpg"
+                      data-src-hover="/assets/img/product/15.jpg"
                       data-tooltip="Orange"
                     >
                       {/* <span style="background-color: #0e0e0e"></span> */}

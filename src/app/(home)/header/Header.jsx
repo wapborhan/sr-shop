@@ -14,9 +14,9 @@ const Header = () => {
                 <span className="inner-ring"></span>
               </span>
             </a> */}
-            <a href="index.html" className="logo">
-              <img src="assets/img/logo/logo.png" alt="logo" />
-            </a>
+            <Link href="/" className="logo">
+              <img src="/assets/img/logo/logo.png" alt="logo" />
+            </Link>
             <a href="javascript:void(0)" className="mn-toggle-menu">
               <div className="header-icon">
                 <i className="ri-menu-3-fill"></i>
@@ -34,7 +34,10 @@ const Header = () => {
                     <div className="mn-main-menu">
                       <ul>
                         <li className="non-drop">
-                          <a href="index.html">Home</a>
+                          <Link href="/">Home</Link>
+                        </li>
+                        <li className="non-drop">
+                          <Link href="/shop">Shop</Link>
                         </li>
                         <li className="dropdown drop-list">
                           <a

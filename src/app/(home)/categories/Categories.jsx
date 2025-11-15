@@ -25,17 +25,17 @@ const Categories = () => {
           <ul>
             <li>
               <a href="shop-right-sidebar.html">
-                <img src="assets/img/category/1.jpg" alt="category" />
+                <img src="/assets/img/category/1.jpg" alt="category" />
               </a>
             </li>
             <li>
               <a href="shop-right-sidebar.html">
-                <img src="assets/img/category/2.jpg" alt="category" />
+                <img src="/assets/img/category/2.jpg" alt="category" />
               </a>
             </li>
             <li>
               <a href="shop-right-sidebar.html">
-                <img src="assets/img/category/3.jpg" alt="category" />
+                <img src="/assets/img/category/3.jpg" alt="category" />
               </a>
             </li>
           </ul>
@@ -51,17 +51,17 @@ const Categories = () => {
           <ul>
             <li>
               <a href="shop-right-sidebar.html">
-                <img src="assets/img/category/4.jpg" alt="category" />
+                <img src="/assets/img/category/4.jpg" alt="category" />
               </a>
             </li>
             <li>
               <a href="shop-right-sidebar.html">
-                <img src="assets/img/category/5.jpg" alt="category" />
+                <img src="/assets/img/category/5.jpg" alt="category" />
               </a>
             </li>
             <li>
               <a href="shop-right-sidebar.html">
-                <img src="assets/img/category/6.jpg" alt="category" />
+                <img src="/assets/img/category/6.jpg" alt="category" />
               </a>
             </li>
           </ul>
@@ -77,17 +77,17 @@ const Categories = () => {
           <ul>
             <li>
               <a href="shop-right-sidebar.html">
-                <img src="assets/img/category/7.jpg" alt="category" />
+                <img src="/assets/img/category/7.jpg" alt="category" />
               </a>
             </li>
             <li>
               <a href="shop-right-sidebar.html">
-                <img src="assets/img/category/8.jpg" alt="category" />
+                <img src="/assets/img/category/8.jpg" alt="category" />
               </a>
             </li>
             <li>
               <a href="shop-right-sidebar.html">
-                <img src="assets/img/category/9.jpg" alt="category" />
+                <img src="/assets/img/category/9.jpg" alt="category" />
               </a>
             </li>
           </ul>
@@ -103,17 +103,17 @@ const Categories = () => {
           <ul>
             <li>
               <a href="shop-right-sidebar.html">
-                <img src="assets/img/category/10.jpg" alt="category" />
+                <img src="/assets/img/category/10.jpg" alt="category" />
               </a>
             </li>
             <li>
               <a href="shop-right-sidebar.html">
-                <img src="assets/img/category/11.jpg" alt="category" />
+                <img src="/assets/img/category/11.jpg" alt="category" />
               </a>
             </li>
             <li>
               <a href="shop-right-sidebar.html">
-                <img src="assets/img/category/12.jpg" alt="category" />
+                <img src="/assets/img/category/12.jpg" alt="category" />
               </a>
             </li>
           </ul>
@@ -129,17 +129,17 @@ const Categories = () => {
           <ul>
             <li>
               <a href="shop-right-sidebar.html">
-                <img src="assets/img/category/13.jpg" alt="category" />
+                <img src="/assets/img/category/13.jpg" alt="category" />
               </a>
             </li>
             <li>
               <a href="shop-right-sidebar.html">
-                <img src="assets/img/category/14.jpg" alt="category" />
+                <img src="/assets/img/category/14.jpg" alt="category" />
               </a>
             </li>
             <li>
               <a href="shop-right-sidebar.html">
-                <img src="assets/img/category/15.jpg" alt="category" />
+                <img src="/assets/img/category/15.jpg" alt="category" />
               </a>
             </li>
           </ul>
@@ -155,17 +155,17 @@ const Categories = () => {
           <ul>
             <li>
               <a href="shop-right-sidebar.html">
-                <img src="assets/img/category/16.jpg" alt="category" />
+                <img src="/assets/img/category/16.jpg" alt="category" />
               </a>
             </li>
             <li>
               <a href="shop-right-sidebar.html">
-                <img src="assets/img/category/17.jpg" alt="category" />
+                <img src="/assets/img/category/17.jpg" alt="category" />
               </a>
             </li>
             <li>
               <a href="shop-right-sidebar.html">
-                <img src="assets/img/category/18.jpg" alt="category" />
+                <img src="/assets/img/category/18.jpg" alt="category" />
               </a>
             </li>
           </ul>

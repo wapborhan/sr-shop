@@ -5277,7 +5277,7 @@ button.btn-close.qty_close {
   position: absolute;
   top: 50%;
   left: 0;
-  background-image: url("/assets/img/hero/shape-1.png");
+  background-image: url("//assets/img/hero/shape-1.png");
   background-repeat: no-repeat;
   background-size: 100%;
   -webkit-transform: translateY(-50%);
@@ -5306,7 +5306,7 @@ button.btn-close.qty_close {
   position: absolute;
   top: 50%;
   right: 0;
-  background-image: url("/assets/img/hero/shape-1.png");
+  background-image: url("//assets/img/hero/shape-1.png");
   background-repeat: no-repeat;
   background-size: 100%;
   -webkit-transform: translateY(-50%) rotate(180deg);
@@ -5336,7 +5336,7 @@ button.btn-close.qty_close {
   position: absolute;
   left: -16px;
   bottom: -7px;
-  background-image: url("/assets/img/hero/shape-2.png");
+  background-image: url("//assets/img/hero/shape-2.png");
   background-repeat: no-repeat;
   background-size: 100%;
   -webkit-transform: translateY(-50%) rotate(270deg);
@@ -5350,7 +5350,7 @@ button.btn-close.qty_close {
   position: absolute;
   right: -17px;
   bottom: -8px;
-  background-image: url("/assets/img/hero/shape-2.png");
+  background-image: url("//assets/img/hero/shape-2.png");
   background-repeat: no-repeat;
   background-size: 100%;
   -webkit-transform: translateY(-50%);
@@ -5383,19 +5383,19 @@ button.btn-close.qty_close {
 }
 
 .mn-hero .slide-1 {
-  background-image: url("/assets/img/hero/1.jpg");
+  background-image: url("//assets/img/hero/1.jpg");
 }
 
 .mn-hero .slide-2 {
-  background-image: url("/assets/img/hero/2.jpg");
+  background-image: url("//assets/img/hero/2.jpg");
 }
 
 .mn-hero .slide-3 {
-  background-image: url("/assets/img/hero/3.jpg");
+  background-image: url("//assets/img/hero/3.jpg");
 }
 
 .mn-hero .slide-4 {
-  background-image: url("/assets/img/hero/4.jpg");
+  background-image: url("//assets/img/hero/4.jpg");
 }
 
 .mn-hero .mn-hero-slider .mn-hero-slide {
