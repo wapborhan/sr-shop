@@ -79,7 +79,12 @@ const Hero = () => {
             </a>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="mn-hero-slide swiper-slide slide-2">
+        <SwiperSlide
+          className="mn-hero-slide swiper-slide slide-2"
+          style={{
+            backgroundImage: `url(/assets/img/hero/2.jpg)`,
+          }}
+        >
           <div className="mn-hero-detail">
             <p className="label">
               <span>
@@ -98,7 +103,12 @@ const Hero = () => {
             </a>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="mn-hero-slide swiper-slide slide-3">
+        <SwiperSlide
+          className="mn-hero-slide swiper-slide slide-3"
+          style={{
+            backgroundImage: `url(/assets/img/hero/3.jpg)`,
+          }}
+        >
           <div className="mn-hero-detail">
             <p className="label">
               <span>
@@ -117,7 +127,12 @@ const Hero = () => {
             </a>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="mn-hero-slide swiper-slide slide-4">
+        <SwiperSlide
+          className="mn-hero-slide swiper-slide slide-4"
+          style={{
+            backgroundImage: `url(/assets/img/hero/4.jpg)`,
+          }}
+        >
           <div className="mn-hero-detail">
             <p className="label">
               <span>

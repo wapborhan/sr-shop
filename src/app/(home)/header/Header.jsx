@@ -16,6 +16,7 @@ const Header = () => {
             </a> */}
             <Link href="/" className="logo">
               <img src="/assets/img/logo/logo.png" alt="logo" />
+              {/* <h2>SR Shop</h2> */}
             </Link>
             <a href="javascript:void(0)" className="mn-toggle-menu">
               <div className="header-icon">

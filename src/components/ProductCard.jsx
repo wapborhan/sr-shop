@@ -1,9 +1,11 @@
+import Link from "next/link";
 import React from "react";
 
-const ProductCard = ({ listView }) => {
+const ProductCard = ({ listView, productData }) => {
+  const { link, category } = productData;
   return (
     <div
-      className={`col-md-4 col-sm-6 col-xs-6 m-b-24 mn-product-box pro-gl-content ${
+      className={`col-md-3 col-sm-6 col-xs-6 m-b-24 mn-product-box pro-gl-content ${
         listView && "width-100"
       }`}
     >
@@ -13,24 +15,19 @@ const ProductCard = ({ listView }) => {
             <span className="new">new</span>
           </div>
           <div className="mn-img">
-            <a href="product-detail.html" className="image">
+            <Link href={link} className="image">
               <img
                 className="main-img"
                 src="/assets/img/product/17.jpg"
                 alt="product"
               />
-              <img
-                className="hover-img"
-                src="/assets/img/product/18.jpg"
-                alt="product"
-              />
-            </a>
+            </Link>
             <div className="mn-pro-loader"></div>
             <div className="mn-options">
               <ul>
                 <li>
                   <a
-                    href="javascript:void(0)"
+                    href="/"
                     data-tooltip
                     title="Quick View"
                     data-link-action="quickview"
@@ -42,7 +39,7 @@ const ProductCard = ({ listView }) => {
                 </li>
                 <li>
                   <a
-                    href="javascript:void(0)"
+                    href="/"
                     data-tooltip
                     title="Compare"
                     className="mn-compare"
@@ -52,7 +49,7 @@ const ProductCard = ({ listView }) => {
                 </li>
                 <li>
                   <a
-                    href="javascript:void(0)"
+                    href="/"
                     data-tooltip
                     title="Add To Cart"
                     className="mn-add-cart"
@@ -66,62 +63,21 @@ const ProductCard = ({ listView }) => {
         </div>
         <div className="mn-product-detail">
           <div className="cat">
-            <a href="shop-right-sidebar.html">T-shirt</a>
-            <ul>
-              <li>s</li>
-              <li>m</li>
-              <li>xl</li>
-            </ul>
+            <Link href={`/categories/${category}`}>{category}</Link>
           </div>
           <h5>
-            <a href="#">Cotton fabric T-shirt</a>
+            <Link href={link}>Cotton fabric T-shirt</Link>
           </h5>
           <p className="mn-info">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s.
           </p>
-          <div className="mn-price">
-            <div className="mn-price-new">$120</div>
-            <div className="mn-price-old">$130</div>
-          </div>
+
           <div className="mn-pro-option">
-            <div className="mn-pro-color">
-              <ul className="mn-opt-swatch mn-change-img">
-                <li>
-                  <a
-                    href="#"
-                    className="mn-opt-clr-img"
-                    data-src="/assets/img/product/19.jpg"
-                    data-src-hover="/assets/img/product/20.jpg"
-                    data-tooltip="Orange"
-                  >
-                    {/* <span style="background-color: #de8abc"></span> */}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="mn-opt-clr-img"
-                    data-src="/assets/img/product/21.jpg"
-                    data-src-hover="/assets/img/product/22.jpg"
-                    data-tooltip="Orange"
-                  >
-                    {/* <span style="background-color: #5e68ce"></span> */}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="mn-opt-clr-img"
-                    data-src="/assets/img/product/17.jpg"
-                    data-src-hover="/assets/img/product/18.jpg"
-                    data-tooltip="Orange"
-                  >
-                    {/* <span style="background-color: #eee"></span> */}
-                  </a>
-                </li>
-              </ul>
+            <div className="mn-price">
+              <div className="mn-price-new">$120</div>
+              <div className="mn-price-old">$130</div>
             </div>
             <a
               href="javascript:void(0);"

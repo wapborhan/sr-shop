@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Footer = () => {
   return (
     <footer className="m-t-15">
@@ -8,15 +10,12 @@ const Footer = () => {
               <div className="col-sm-12 col-lg-3 mn-footer-cat">
                 <div className="mn-footer-widget mn-footer-company">
                   <img
-                    src="/assets/img/logo/logo.png"
-                    className="mn-footer-logo"
+                    src="/assets/img/logo/logo-flat.png"
+                    className="mn-footer-logos"
                     alt="footer logo"
                   />
-                  <img
-                    src="/assets/img/logo/logo-dark.png"
-                    className="mn-footer-dark-logo"
-                    alt="footer logo"
-                  />
+
+                  {/* <h2>SR Shop</h2> */}
                   <p className="mn-footer-detail">
                     The Mantu is the biggest market of grocery products. Get
                     your daily needs from our store.
@@ -192,18 +191,22 @@ const Footer = () => {
                     <div className="mn-copy">
                       Copyright © <span id="copyright_year"></span>
                       <a className="site-name" href="index.html">
-                        The Mantu
+                        SR Shop
                       </a>{" "}
                       all rights reserved.
                     </div>
                   </div>
                 </div>
+
                 <div className="footer-bottom-right">
                   <div className="footer-bottom-payment d-flex justify-content-center">
                     <div className="payment-link">
                       <img src="/assets/img/footer/payment.png" alt="payment" />
                     </div>
                   </div>
+                </div>
+                <div className="mn-copy">
+                  Developed by <Link href="">SR Dream Lab</Link>.
                 </div>
               </div>
             </div>

@@ -4,6 +4,7 @@ import { useState } from "react";
 
 const ShopRightSide = () => {
   const [listView, setListView] = useState(false);
+  const productData = { link: "/product/t-short", category: "T-shirt" };
   return (
     <div className="mn-shop-rightside col-lg-9 col-md-12">
       <div className="mn-pro-list-top d-flex">
@@ -85,11 +86,11 @@ const ShopRightSide = () => {
       <div className="shop-pro-content">
         <div className={`shop-pro-inner ${listView && "list-view"}`}>
           <div className="row">
-            <ProductCard listView={listView} />
-            <ProductCard listView={listView} />
-            <ProductCard listView={listView} />
-            <ProductCard listView={listView} />
-            <ProductCard listView={listView} />
+            <ProductCard listView={listView} productData={productData} />
+            <ProductCard listView={listView} productData={productData} />
+            <ProductCard listView={listView} productData={productData} />
+            <ProductCard listView={listView} productData={productData} />
+            <ProductCard listView={listView} productData={productData} />
           </div>
         </div>
         <div className="mn-pro-pagination m-b-15">
