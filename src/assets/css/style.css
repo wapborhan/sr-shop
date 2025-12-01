@@ -1,7 +1,7 @@
 /*-----------------------------------------------------------------------------------
 
-    Item Name: Mantu - eCommerce HTML Template
-    Author: Maraviya Infotech
+    Item Name: Minnat Mart 
+    Author: Borhan Uddin
     Version: 1.0
     Copyright 2025
 
@@ -52,107 +52,7 @@
     - Wishlist Page
 -----------------------------------------------------------------------------------*/
 /*=== Typography ===*/
-/*--  Poppins font  --*/
-@font-face {
-  font-family: var(--font-poppins), sans-serif;
-  src: url("../fonts/poppins/Poppins-Thin.ttf") format("truetype");
-  font-weight: 100;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: var(--font-poppins), sans-serif;
-  src: url("../fonts/poppins/Poppins-ExtraLight.ttf") format("truetype");
-  font-weight: 200;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: var(--font-poppins), sans-serif;
-  src: url("../fonts/poppins/Poppins-Light.ttf");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: var(--font-poppins), sans-serif;
-  src: url("../fonts/poppins/Poppins-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: var(--font-poppins), sans-serif;
-  src: url("../fonts/poppins/Poppins-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: var(--font-poppins), sans-serif;
-  src: url("../fonts/poppins/Poppins-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: var(--font-poppins), sans-serif;
-  src: url("../fonts/poppins/Poppins-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: var(--font-poppins), sans-serif;
-  src: url("../fonts/poppins/Poppins-ExtraBold.ttf") format("truetype");
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: var(--font-poppins), sans-serif;
-  src: url("../fonts/poppins/Poppins-Black.ttf") format("truetype");
-  font-weight: 900;
-  font-style: normal;
-}
-
-/*--  Quicksand font  --*/
-@font-face {
-  font-family: var(--font-quicksand), sans-serif;
-  src: url("../fonts/quicksand/Quicksand-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: var(--font-quicksand), sans-serif;
-  src: url("../fonts/quicksand/Quicksand-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: var(--font-quicksand), sans-serif;
-  src: url("../fonts/quicksand/Quicksand-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: var(--font-quicksand), sans-serif;
-  src: url("../fonts/quicksand/Quicksand-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: var(--font-quicksand), sans-serif;
-  src: url("../fonts/quicksand/Quicksand-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
-
-/** Font Family **/
 /** Site main Color **/
 /*-------------------------------------------------
   Breadcrumb Style CSS
@@ -11879,7 +11779,7 @@ button.btn-close.qty_close {
   Login Page CSS
 ---------------------------------------------------*/
 .mn-login-content {
-  max-width: 1000px;
+  /* max-width: 1000px; */
   margin: auto;
   padding: 30px 15px;
   background-color: #fff;
@@ -11970,7 +11870,6 @@ button.btn-close.qty_close {
   background-color: transparent;
   border: 1px solid #e5e5e5;
   border-radius: 15px;
-  color: #f1f4f7;
   font-size: 14px;
   outline: none;
 }
@@ -12059,8 +11958,14 @@ button.btn-close.qty_close {
 }
 
 .mn-login-img img {
-  width: 100%;
-  border-radius: 15px;
+  width: 250px;
+
+}
+
+.mn-login-img {
+  display: flex;
+  justify-content: center;
+
 }
 
 .mn-remember {
@@ -12926,4 +12831,8 @@ ul.gi li {
   /* zoom level */
   display: none;
   z-index: 10;
+}
+
+.text-center {
+  text-align: center !important;
 }

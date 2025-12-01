@@ -190,9 +190,9 @@ const Footer = () => {
                   <div className="footer-bottom-copy ">
                     <div className="mn-copy">
                       Copyright © <span id="copyright_year"></span>
-                      <a className="site-name" href="index.html">
-                        SR Shop
-                      </a>{" "}
+                      <Link className="site-name" href="/">
+                        Minnat Mart
+                      </Link>{" "}
                       all rights reserved.
                     </div>
                   </div>
@@ -206,7 +206,7 @@ const Footer = () => {
                   </div>
                 </div>
                 <div className="mn-copy">
-                  Developed by <Link href="">SR Dream Lab</Link>.
+                  Developed by <Link href="/">SR Dream Lab</Link>.
                 </div>
               </div>
             </div>

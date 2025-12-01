@@ -3,9 +3,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "swiper/css";
 import "@/assets/css/style.css";
 import "@/assets/css/vendor/remixicon.css";
-import AOSInit from "@/components/AOSInit";
+import AOSInit from "@/utils/AOSInit";
 import PathProvider from "@/provider/PathProvider";
-import Tooltips from "./utils/Tooltips";
+import Tooltips from "../utils/Tooltips";
+import NextAuthSessionProvider from "@/provider/NextAuthSessionProvider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -30,9 +31,11 @@ export default function RootLayout({ children }) {
       <body className={`${poppins.variable} ${quicksand.variable}`}>
         <AOSInit />
         <Tooltips />
-        <PathProvider>
-          <main className="wrapper sb-default">{children}</main>
-        </PathProvider>
+        <NextAuthSessionProvider>
+          <PathProvider>
+            <main className="wrapper sb-default">{children}</main>
+          </PathProvider>
+        </NextAuthSessionProvider>
       </body>
     </html>
   );

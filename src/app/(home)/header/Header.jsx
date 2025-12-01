@@ -39,6 +39,9 @@ const Header = () => {
                         </li>
                         <li className="non-drop">
                           <Link href="/shop">Shop</Link>
+                        </li>{" "}
+                        <li className="non-drop">
+                          <Link href="/about">About Us</Link>
                         </li>
                         <li className="dropdown drop-list">
                           <a
