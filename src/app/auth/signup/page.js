@@ -37,10 +37,10 @@ const RegisterPage = () => {
       <section className="container">
         <BreadCrumb page="Sign Up" />
         <div className="mn-register p-b-15">
-          <div class="row">
-            <div class="mn-register-wrapper">
-              <div class="mn-register-container">
-                <div class="mn-title">
+          <div className="row">
+            <div className="mn-register-wrapper">
+              <div className="mn-register-container">
+                <div className="mn-title">
                   <h2>
                     Register<span></span>
                   </h2>
@@ -54,9 +54,9 @@ const RegisterPage = () => {
                     </p>
                   )}
                 </div>
-                <div class="mn-register-form">
+                <div className="mn-register-form">
                   <form id="form" onSubmit={handleRegister}>
-                    <span class="mn-register-wrap">
+                    <span className="mn-register-wrap">
                       <label>
                         Email <span className={styles.requerd}>*</span>
                       </label>
@@ -68,7 +68,7 @@ const RegisterPage = () => {
                         required
                       />
                     </span>
-                    <span class="mn-register-wrap">
+                    <span className="mn-register-wrap">
                       <label>
                         Password <span className={styles.requerd}>*</span>
                       </label>
@@ -80,7 +80,7 @@ const RegisterPage = () => {
                         required
                       />
                     </span>
-                    <span class="mn-register-wrap">
+                    <span className="mn-register-wrap">
                       <label>
                         Confirm Password{" "}
                         <span className={styles.requerd}>*</span>
@@ -94,11 +94,11 @@ const RegisterPage = () => {
                       />
                     </span>
 
-                    <span class="mn-register-wrap mn-register-btn">
+                    <span className="mn-register-wrap mn-register-btn">
                       <span>
                         Have an account?<Link href="/auth/signin">Login</Link>
                       </span>
-                      <button class="mn-btn-1" type="submit">
+                      <button className="mn-btn-1" type="submit">
                         <span>Register</span>
                       </button>
                     </span>

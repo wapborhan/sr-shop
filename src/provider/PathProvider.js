@@ -27,9 +27,9 @@ const PathProvider = ({ children }) => {
       <Header />
       {loading && (
         <div id="mn-overlay">
-          <div class="loader">
+          <div className="loader">
             <img src="/assets/img/logo/loader.png" alt="loader" />
-            <span class="shape"></span>
+            <span className="shape"></span>
           </div>
         </div>
       )}

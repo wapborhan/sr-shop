@@ -1,7 +1,7 @@
 const ProductDetails = () => {
   return (
     <div className="mn-single-pro-tab">
-      <div class="mn-title">
+      <div className="mn-title">
         <h2>
           Products <span>Detail</span>
         </h2>
@@ -10,11 +10,11 @@ const ProductDetails = () => {
         <div className="tab-content  mn-single-pro-tab-content">
           <div
             id="mn-spt-nav-details"
-            class="tab-pane fade show active"
+            className="tab-pane fade show active"
             role="tabpanel"
             aria-labelledby="details-tab"
           >
-            <div class="mn-single-pro-tab-desc">
+            <div className="mn-single-pro-tab-desc">
               <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy

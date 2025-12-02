@@ -2,7 +2,10 @@ import Link from "next/link";
 import React from "react";
 
 const ProductCard = ({ listView, productData }) => {
-  const { link, category } = productData;
+  const { title, thumbnail, category } = productData;
+
+  console.log(productData);
+
   return (
     <div
       className={`col-md-3 col-sm-6 col-xs-6 m-b-24 mn-product-box pro-gl-content ${
@@ -15,19 +18,14 @@ const ProductCard = ({ listView, productData }) => {
             <span className="new">new</span>
           </div>
           <div className="mn-img">
-            <Link href={link} className="image">
-              <img
-                className="main-img"
-                src="/assets/img/product/17.jpg"
-                alt="product"
-              />
+            <Link href={`/product/${title}`} className="image">
+              <img className="main-img" src={thumbnail} alt="product" />
             </Link>
             <div className="mn-pro-loader"></div>
             <div className="mn-options">
               <ul>
                 <li>
-                  <a
-                    href="/"
+                  <span
                     data-tooltip
                     title="Quick View"
                     data-link-action="quickview"
@@ -35,27 +33,21 @@ const ProductCard = ({ listView, productData }) => {
                     data-bs-target="#quickview_modal"
                   >
                     <i className="ri-eye-line"></i>
-                  </a>
+                  </span>
                 </li>
                 <li>
-                  <a
-                    href="/"
-                    data-tooltip
-                    title="Compare"
-                    className="mn-compare"
-                  >
+                  <span data-tooltip title="Compare" className="mn-compare">
                     <i className="ri-repeat-line"></i>
-                  </a>
+                  </span>
                 </li>
                 <li>
-                  <a
-                    href="/"
+                  <span
                     data-tooltip
                     title="Add To Cart"
                     className="mn-add-cart"
                   >
                     <i className="ri-shopping-cart-line"></i>
-                  </a>
+                  </span>
                 </li>
               </ul>
             </div>
@@ -66,7 +58,7 @@ const ProductCard = ({ listView, productData }) => {
             <Link href={`/categories/${category}`}>{category}</Link>
           </div>
           <h5>
-            <Link href={link}>Cotton fabric T-shirt</Link>
+            <Link href={"url"}>{title}</Link>
           </h5>
           <p className="mn-info">
             Lorem Ipsum is simply dummy text of the printing and typesetting

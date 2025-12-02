@@ -2,35 +2,35 @@ import React from "react";
 
 const About = () => {
   return (
-    <section class="mn-about p-b-15">
-      <div class="row">
-        <div class="col-lg-6 col-md-12">
-          <div class="mn-about-img">
+    <section className="mn-about p-b-15">
+      <div className="row">
+        <div className="col-lg-6 col-md-12">
+          <div className="mn-about-img">
             <img
               src="/assets/img/common/about-1.html"
-              class="v-img"
+              className="v-img"
               alt="about"
             />
             <img
               src="/assets/img/common/about-2.html"
-              class="h-img"
+              className="h-img"
               alt="about"
             />
             <img
               src="/assets/img/common/about-3.html"
-              class="h-img"
+              className="h-img"
               alt="about"
             />
             <img
               src="/assets/img/common/about-4.html"
-              class="h-img"
+              className="h-img"
               alt="about"
             />
           </div>
         </div>
-        <div class="col-lg-6 col-md-12">
-          <div class="mn-about-detail">
-            <div class="section-title m-t-991">
+        <div className="col-lg-6 col-md-12">
+          <div className="mn-about-detail">
+            <div className="section-title m-t-991">
               <h2>
                 Who We <span>Are?</span>
               </h2>

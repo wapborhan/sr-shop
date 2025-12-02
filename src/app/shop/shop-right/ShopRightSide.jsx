@@ -2,7 +2,7 @@
 import ProductCard from "@/components/ProductCard";
 import { useState } from "react";
 
-const ShopRightSide = () => {
+const ShopRightSide = ({ product }) => {
   const [listView, setListView] = useState(false);
   const productData = { link: "/product/t-short", category: "T-shirt" };
   return (
@@ -86,15 +86,18 @@ const ShopRightSide = () => {
       <div className="shop-pro-content">
         <div className={`shop-pro-inner ${listView && "list-view"}`}>
           <div className="row">
-            <ProductCard listView={listView} productData={productData} />
-            <ProductCard listView={listView} productData={productData} />
-            <ProductCard listView={listView} productData={productData} />
-            <ProductCard listView={listView} productData={productData} />
-            <ProductCard listView={listView} productData={productData} />
+            {product &&
+              product.map((item) => (
+                <ProductCard
+                  key={item.id}
+                  listView={listView}
+                  productData={item}
+                />
+              ))}
           </div>
         </div>
         <div className="mn-pro-pagination m-b-15">
-          <span>Showing 1-12 of 21 item(s)</span>
+          <span>Showing 1-12 of {product.length} item(s)</span>
           <ul className="mn-pro-pagination-inner">
             <li>
               <a className="active" href="#">

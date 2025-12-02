@@ -44,95 +44,7 @@ const Header = () => {
                           <Link href="/about">About Us</Link>
                         </li>
                         <li className="dropdown drop-list">
-                          <a
-                            href="javascript:void(0)"
-                            className="dropdown-arrow"
-                          >
-                            Categories<i className="ri-arrow-down-s-line"></i>
-                          </a>
-                          <ul className="mega-menu d-block">
-                            <li className="d-flex">
-                              <span className="bg"></span>
-                              <ul className="d-block mega-block">
-                                <li className="menu_title">
-                                  <a href="javascript:void(0)">classNameic</a>
-                                </li>
-                                <li>
-                                  <a href="shop-right-sidebar.html">
-                                    Shop Right sidebar
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="shop-banner-right-sidebar.html">
-                                    Banner Right sidebar
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="shop-full-width.html">
-                                    Shop Full Width
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="shop-banner-full-width.html">
-                                    Banner Full Width
-                                  </a>
-                                </li>
-                              </ul>
-                              <ul className="d-block mega-block">
-                                <li className="menu_title">
-                                  <a href="javascript:void(0)">List</a>
-                                </li>
-                                <li>
-                                  <a href="shop-list-right-sidebar.html">
-                                    Shop Right sidebar
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="shop-list-banner-right-sidebar.html">
-                                    Banner Right sidebar
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="shop-list-full-width.html">
-                                    Shop Full Width
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="shop-list-banner-full-width.html">
-                                    Banner Full Width
-                                  </a>
-                                </li>
-                              </ul>
-                            </li>
-                          </ul>
-                        </li>
-                        <li className="dropdown drop-list">
-                          <a
-                            href="javascript:void(0)"
-                            className="dropdown-arrow"
-                          >
-                            Products<i className="ri-arrow-down-s-line"></i>
-                          </a>
-                          <ul className="sub-menu">
-                            <li>
-                              <a href="product-detail.html">product detail</a>
-                            </li>
-                            <li>
-                              <a href="product-accordion.html">
-                                Product accordion
-                              </a>
-                            </li>
-                            <li>
-                              <a href="product-full-width.html">
-                                Product full width
-                              </a>
-                            </li>
-                            <li>
-                              <a href="product-accordion-full-width.html">
-                                accordion full width
-                              </a>
-                            </li>
-                          </ul>
+                          <Link href="/categories">Categories</Link>
                         </li>
                         <li className="dropdown drop-list">
                           <a
@@ -385,21 +297,18 @@ const Header = () => {
                 </Link>
               </div>
               <div className="mn-tool-wish">
-                <a
-                  href="javascript:void(0)"
+                <Link
+                  href="/wishlist"
                   className="mn-main-wishlist mn-wishlist-toggle"
                 >
                   <span className="label lbl-1">3</span>
                   <FaRegHeart />
-                </a>
+                </Link>
               </div>
               <div className="mn-tool-cart">
-                <a
-                  href="javascript:void(0)"
-                  className="mn-main-cart mn-cart-toggle"
-                >
+                <Link href="/cart" className="mn-main-cart mn-cart-toggle">
                   <span className="label lbl-2">4</span> <BsCart3 />
-                </a>
+                </Link>
               </div>
             </div>
           </div>

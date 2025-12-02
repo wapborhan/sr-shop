@@ -4243,6 +4243,12 @@ button.btn-close.qty_close {
   border: 1px solid #ddd;
 }
 
+.mn-cart-rightside .mn-sidebar-wrap {
+  position: sticky;
+  top: 30px;
+  bottom: 30px;
+}
+
 .h-sidebar .mn-sidebar-wrap {
   border: 0 !important;
   padding: 0 !important;
@@ -5962,21 +5968,22 @@ button.btn-close.qty_close {
   margin: 5px;
 }
 
-.mn-product-card .mn-product-img .mn-img .mn-options ul li a {
+.mn-product-card .mn-product-img .mn-img .mn-options ul li span {
   line-height: 16px;
+  cursor: pointer;
 }
 
-.mn-product-card .mn-product-img .mn-img .mn-options ul li a i {
+.mn-product-card .mn-product-img .mn-img .mn-options ul li span i {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   color: #313b50;
 }
 
-.mn-product-card .mn-product-img .mn-img .mn-options ul li a:hover i {
+.mn-product-card .mn-product-img .mn-img .mn-options ul li span:hover i {
   color: #3a4ee5;
 }
 
-.mn-product-card .mn-product-img .mn-img .mn-options ul li a.active i {
+.mn-product-card .mn-product-img .mn-img .mn-options ul li span.active i {
   color: #3a4ee5;
 }
 
@@ -6014,6 +6021,7 @@ button.btn-close.qty_close {
   transition: all 0.3s ease-in-out;
   position: relative;
   z-index: 1;
+  background: #e1e4e9;
 }
 
 .mn-product-card .mn-product-img .hover-img {
@@ -10125,8 +10133,7 @@ button.btn-close.qty_close {
   width: 84px;
   height: 35px;
   padding: 0;
-  border: 1px solid #e5e5e5;
-  border-radius: 10px;
+
   display: inline-block;
   overflow: hidden;
   position: relative;
@@ -10143,19 +10150,20 @@ button.btn-close.qty_close {
 }
 
 .mn-cart-content .table-content table tbody>tr td .cart-qty-plus-minus input {
-  width: 40px;
+  width: 80px;
   height: auto;
   margin: 0;
-  padding: 0;
+  padding: 7px;
   background: transparent none repeat scroll 0 0;
-  border: medium none;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
   color: #313b50;
   float: left;
   font-size: 14px;
   text-align: center;
   outline: none;
   font-weight: 600;
-  line-height: 38px;
+  line-height: 20px;
 }
 
 .mn-cart-content .table-content table tbody>tr td .cart-qty-plus-minus .mn_cart_qtybtn {
@@ -10487,11 +10495,12 @@ button.btn-close.qty_close {
 }
 
 .mn-cart-summary-bottom .mn-cart-summary .mn-cart-coupan-content {
-  display: none;
+  /* display: none; */
   margin-bottom: 0;
 }
 
 .mn-cart-coupan-form {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
