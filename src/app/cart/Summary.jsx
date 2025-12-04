@@ -1,11 +1,9 @@
 "use client";
 import React, { useState } from "react";
 
-const Summary = ({ coupneAmount, products }) => {
+const Summary = ({ coupneAmount, subTotal }) => {
   const [delivaryOption, setDeliveryOption] = useState("outside");
-  const subTotal = products
-    .reduce((sum, item) => sum + item.price, 0)
-    .toFixed(2);
+
   return (
     <div className="mn-cart-rightside col-lg-4 col-md-12 m-t-991 sticky">
       <div className="mn-sidebar-wrap">
@@ -41,19 +39,19 @@ const Summary = ({ coupneAmount, products }) => {
               <div className="mn-cart-summary">
                 <div>
                   <span className="text-left">Sub-Total</span>
-                  <span className="text-right">{subTotal} TK</span>
+                  <span className="text-right">{subTotal.toFixed(2)} TK</span>
                 </div>
                 <div>
                   <span className="text-left">Delivery Charges</span>
                   <span className="text-right">
-                    {delivaryOption === "inside" ? 80 : 120} TK
+                    {(delivaryOption === "inside" ? 80.0 : 120.0).toFixed(2)} TK
                   </span>
                 </div>
                 <div>
                   <span className="text-left">Coupan Discount</span>
                   <span className="text-right">
                     <a className="mn-cart-coupan">
-                      {coupneAmount ? coupneAmount : 0} TK
+                      {(coupneAmount ? coupneAmount : 0).toFixed(2)} TK
                     </a>
                   </span>
                 </div>
@@ -85,7 +83,12 @@ const Summary = ({ coupneAmount, products }) => {
                 <div className="mn-cart-summary-total">
                   <span className="text-left">Total Amount</span>
                   <span className="text-right">
-                    {subTotal - (delivaryOption === "inside" ? 80 : 120)} TK
+                    {(
+                      (subTotal ?? 0) +
+                      (delivaryOption === "inside" ? 80 : 120) -
+                      (coupneAmount ? coupneAmount : 0)
+                    ).toFixed(2)}
+                    TK
                   </span>
                 </div>{" "}
                 <div className="col-lg-12">

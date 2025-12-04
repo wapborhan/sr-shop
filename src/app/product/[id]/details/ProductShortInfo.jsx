@@ -1,14 +1,16 @@
 import ProductDescription from "./ProductDescription";
 import ProductImage from "./ProductImage";
 
-const ProductShortInfo = () => {
+const ProductShortInfo = ({ product }) => {
+  console.log(product);
+
   return (
     <>
       <div className="single-pro-img">
-        <ProductImage />
+        <ProductImage productImage={product?.thumbnail} />
       </div>
       <div className="single-pro-desc m-t-991">
-        <ProductDescription />
+        <ProductDescription product={product} />
       </div>
     </>
   );

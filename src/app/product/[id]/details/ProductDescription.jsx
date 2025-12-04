@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProductDescription = () => {
+const ProductDescription = ({ product }) => {
   return (
     <div className="single-pro-content">
       <h5 className="mn-single-title">

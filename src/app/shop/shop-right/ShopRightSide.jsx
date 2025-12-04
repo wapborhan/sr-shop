@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const ShopRightSide = ({ product }) => {
   const [listView, setListView] = useState(false);
-  const productData = { link: "/product/t-short", category: "T-shirt" };
+
   return (
     <div className="mn-shop-rightside col-lg-9 col-md-12">
       <div className="mn-pro-list-top d-flex">

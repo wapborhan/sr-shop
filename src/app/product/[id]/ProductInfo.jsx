@@ -2,14 +2,14 @@ import ProductShortInfo from "./details/ProductShortInfo";
 import ProductDetails from "./details/ProductDetails";
 import ProductRevew from "./revew/ProductRevew";
 
-const ProductInfo = () => {
+const ProductInfo = ({ product }) => {
   return (
     <div className="single-pro-block">
       <div className="single-pro-inner">
         <div className="row">
-          <ProductShortInfo />
-          <ProductDetails />
-          <ProductRevew />
+          <ProductShortInfo product={product} />
+          <ProductDetails description={product?.description} />
+          <ProductRevew product={product} />
         </div>
       </div>
     </div>

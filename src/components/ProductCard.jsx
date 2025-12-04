@@ -1,10 +1,25 @@
+"use client";
+import { addToCart, isInCart } from "@/lib/cart";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const ProductCard = ({ listView, productData }) => {
-  const { title, thumbnail, category } = productData;
+  const { id, title, thumbnail, category } = productData;
 
-  console.log(productData);
+  const [added, setAdded] = useState(false);
+
+  useEffect(() => {
+    setAdded(isInCart(id));
+  }, [id]);
+
+  const handleAddToCart = () => {
+    const result = addToCart(id, 1); // store only id + qty = 1
+    if (!result.added) {
+      setAdded(true);
+      return;
+    }
+    setAdded(true);
+  };
 
   return (
     <div
@@ -12,13 +27,18 @@ const ProductCard = ({ listView, productData }) => {
         listView && "width-100"
       }`}
     >
+      {added && (
+        <p style={{ color: "green", marginTop: "8px" }}>
+          ✓ Already added to cart
+        </p>
+      )}
       <div className="mn-product-card">
         <div className="mn-product-img">
           <div className="lbl">
             <span className="new">new</span>
           </div>
           <div className="mn-img">
-            <Link href={`/product/${title}`} className="image">
+            <Link href={`/product/${id}`} className="image">
               <img className="main-img" src={thumbnail} alt="product" />
             </Link>
             <div className="mn-pro-loader"></div>
@@ -43,7 +63,8 @@ const ProductCard = ({ listView, productData }) => {
                 <li>
                   <span
                     data-tooltip
-                    title="Add To Cart"
+                    title={added ? "Already Added" : "Add To Cart"}
+                    onClick={handleAddToCart}
                     className="mn-add-cart"
                   >
                     <i className="ri-shopping-cart-line"></i>

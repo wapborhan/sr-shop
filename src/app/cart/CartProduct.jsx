@@ -1,9 +1,6 @@
 "use client";
-import React, { useState } from "react";
 
-const CartProduct = ({ products }) => {
-  const [qty, setQty] = useState({}); // store per-product qty
-
+const CartProduct = ({ products, qty, updateQty, removeFromCart }) => {
   return (
     <div className="mn-cart-content">
       <div className="mn-cart-inner cart_list">
@@ -27,7 +24,7 @@ const CartProduct = ({ products }) => {
                     return (
                       <tr className="mn-cart-product" key={product.id}>
                         <td data-label="Product" className="mn-cart-pro-name">
-                          <a href="product-detail.html">
+                          <a>
                             <img
                               className="mn-cart-pro-img"
                               src={product.thumbnail}
@@ -55,10 +52,7 @@ const CartProduct = ({ products }) => {
                               min={1}
                               value={quantity}
                               onChange={(e) =>
-                                setQty({
-                                  ...qty,
-                                  [product.id]: Number(e.target.value),
-                                })
+                                updateQty(product.id, Number(e.target.value))
                               }
                             />
                           </div>
@@ -69,9 +63,12 @@ const CartProduct = ({ products }) => {
                         </td>
 
                         <td data-label="Remove" className="mn-cart-pro-remove">
-                          <a href="#">
+                          <span
+                            onClick={() => removeFromCart(product.id)}
+                            style={{ cursor: "pointer" }}
+                          >
                             <i className="ri-delete-bin-line"></i>
-                          </a>
+                          </span>
                         </td>
                       </tr>
                     );
