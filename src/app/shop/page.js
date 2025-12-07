@@ -3,10 +3,10 @@ import BreadCrumb from "@/components/BreadCrumb";
 import Banner from "./banner/Banner";
 import ShopRightSide from "./shop-right/ShopRightSide";
 import ShopLeftSide from "./shop-left/ShopLeftSide";
-import { fetchUser } from "@/lib/fetchUser";
+import { fetchProducts } from "@/lib/fetchProducts";
 
 const Shop = () => {
-  const product = use(fetchUser());
+  const product = use(fetchProducts());
 
   return (
     <div className="shop container m-t-30">

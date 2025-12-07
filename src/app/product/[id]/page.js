@@ -2,7 +2,6 @@ import BreadCrumb from "@/components/BreadCrumb";
 import ProductSidebar from "./ProductSidebar";
 import ProductInfo from "./ProductInfo";
 import RelatadeProducts from "./RelatadeProducts";
-import { use } from "react";
 
 const fetchProductById = async (id) => {
   try {
@@ -11,6 +10,7 @@ const fetchProductById = async (id) => {
     });
 
     if (!res.ok) throw new Error("Failed to fetch product");
+    console.log(res);
 
     return await res.json();
   } catch (err) {
@@ -19,9 +19,9 @@ const fetchProductById = async (id) => {
   }
 };
 
-const page = ({ params }) => {
-  const { id } = params;
-  const product = use(fetchProductById(id));
+const page = async ({ params }) => {
+  const { id } = await params;
+  const product = await fetchProductById(id);
 
   return (
     <div className="product container m-t-30">
@@ -31,8 +31,8 @@ const page = ({ params }) => {
           <div className="mn-single-product">
             <div className="row">
               <div className="mn-pro-rightside mn-common-rightside col-lg-9 col-md-12 m-b-15">
-                <ProductInfo product={product}/>
-                <RelatadeProducts product={product}/>
+                <ProductInfo product={product} />
+                <RelatadeProducts category={product?.category} />
               </div>
               <ProductSidebar />
             </div>

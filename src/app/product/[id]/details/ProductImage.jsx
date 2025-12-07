@@ -9,15 +9,15 @@ import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
-const productImage = [
-  "/assets/img/product/27.jpg",
-  "/assets/img/product/28.jpg",
-  "/assets/img/product/29.jpg",
-  "/assets/img/product/30.jpg",
-  "/assets/img/product/31.jpg",
-];
+// const productImage = [
+//   "/assets/img/product/27.jpg",
+//   "/assets/img/product/28.jpg",
+//   "/assets/img/product/29.jpg",
+//   "/assets/img/product/30.jpg",
+//   "/assets/img/product/31.jpg",
+// ];
 
-const ProductImage = () => {
+const ProductImage = ({ productImage }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const containerRefs = useRef([]);
@@ -75,30 +75,50 @@ const ProductImage = () => {
         thumbs={{ swiper: thumbsSwiper }}
         modules={[FreeMode, Thumbs]}
       >
-        {productImage.map((image, idx) => (
-          <SwiperSlide
-            key={idx}
-            className="single-slide product-zoom-container"
-            style={{ position: "relative" }}
-            ref={(el) => (containerRefs.current[idx] = el)}
-          >
-            <img className="img-responsive img-fluid" src={image} alt={image} />
-            <div
-              className="product-zoom-lens"
-              ref={lensRef}
-              style={{ display: "none" }}
-            ></div>
-            <div
-              className="product-zoom-result"
-              ref={resultRef}
-              style={{
-                display: "none",
-                backgroundImage: `url(${productImage[activeIndex]})`,
-                backgroundSize: "200%",
-              }}
-            ></div>
-          </SwiperSlide>
-        ))}
+        {Array.isArray(productImage) ? (
+          productImage.map((image, idx) => (
+            <SwiperSlide
+              key={idx}
+              className="single-slide product-zoom-container"
+              style={{ position: "relative" }}
+              ref={(el) => (containerRefs.current[idx] = el)}
+            >
+              <img
+                className="img-responsive img-fluid"
+                src={image}
+                alt={image}
+              />
+              <div
+                className="product-zoom-lens"
+                ref={lensRef}
+                style={{ display: "none" }}
+              ></div>
+              <div
+                className="product-zoom-result"
+                ref={resultRef}
+                style={{
+                  display: "none",
+                  backgroundImage: `url(${productImage[activeIndex]})`,
+                  backgroundSize: "200%",
+                }}
+              ></div>
+            </SwiperSlide>
+          ))
+        ) : (
+          <>
+            <SwiperSlide
+              className="single-slide product-zoom-container"
+              style={{ position: "relative" }}
+            >
+              <img
+                src={productImage}
+                alt="product"
+                className="img-responsive img-fluid"
+                style={{ justifySelf: "center" }}
+              />
+            </SwiperSlide>
+          </>
+        )}
       </Swiper>
 
       <Swiper
@@ -116,15 +136,17 @@ const ProductImage = () => {
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs]}
       >
-        {productImage.map((image, idx) => {
-          return (
-            <SwiperSlide className="slick-slide" key={idx}>
-              <div className="single-slide">
-                <img className="img-responsive" src={image} alt={image} />
-              </div>
-            </SwiperSlide>
-          );
-        })}
+        {Array.isArray(productImage)
+          ? productImage.map((image, idx) => {
+              return (
+                <SwiperSlide className="slick-slide" key={idx}>
+                  <div className="single-slide">
+                    <img className="img-responsive" src={image} alt={image} />
+                  </div>
+                </SwiperSlide>
+              );
+            })
+          : ""}
       </Swiper>
     </div>
   );

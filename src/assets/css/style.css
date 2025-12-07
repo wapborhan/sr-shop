@@ -8442,7 +8442,7 @@ button.btn-close.qty_close {
 }
 
 .mn-single-product .single-nav-thumb .single-slide {
-  padding: 16px 8px 0 8px;
+  /* padding: 16px 8px 0 8px; */
   display: block !important;
 }
 
@@ -8452,6 +8452,12 @@ button.btn-close.qty_close {
   transition: all 0.3s ease 0s;
   cursor: pointer;
   border-radius: 15px;
+  border: 1px solid #e1e4e9;
+  background: transparent;
+}
+
+.mn-single-product .swiper-slide-thumb-active .single-slide img {
+  background: #e1e4e9;
 }
 
 .mn-single-product .single-nav-thumb .slick-slide.slick-current.slick-active img {

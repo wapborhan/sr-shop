@@ -21,17 +21,14 @@ const ProductCard = ({ listView, productData }) => {
     setAdded(true);
   };
 
+  console.log(productData);
+
   return (
     <div
       className={`col-md-3 col-sm-6 col-xs-6 m-b-24 mn-product-box pro-gl-content ${
         listView && "width-100"
       }`}
     >
-      {added && (
-        <p style={{ color: "green", marginTop: "8px" }}>
-          ✓ Already added to cart
-        </p>
-      )}
       <div className="mn-product-card">
         <div className="mn-product-img">
           <div className="lbl">
@@ -79,7 +76,7 @@ const ProductCard = ({ listView, productData }) => {
             <Link href={`/categories/${category}`}>{category}</Link>
           </div>
           <h5>
-            <Link href={"url"}>{title}</Link>
+            <Link href={`/product/${id}`}>{title}</Link>
           </h5>
           <p className="mn-info">
             Lorem Ipsum is simply dummy text of the printing and typesetting

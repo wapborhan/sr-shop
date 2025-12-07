@@ -1,11 +1,9 @@
 import BreadCrumb from "@/components/BreadCrumb";
-import { fetchUser } from "@/lib/fetchUser";
+import { fetchProducts } from "@/lib/fetchProducts";
 import React, { use } from "react";
 
 const page = () => {
-  const product = use(fetchUser());
-
-  console.log(product);
+  const product = use(fetchProducts());
 
   return (
     <div className="container">

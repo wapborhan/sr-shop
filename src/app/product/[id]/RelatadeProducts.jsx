@@ -1,7 +1,9 @@
 import ProductCard from "@/components/ProductCard";
+import { getProductsByCategory } from "@/lib/fetchProducts";
 
-const RelatadeProducts = () => {
-  const productData = { link: "/product/t-short", category: "T-shirt" };
+const RelatadeProducts = async ({ category }) => {
+  const productData = await getProductsByCategory(category);
+
   return (
     <section className="mn-related-product m-t-30">
       <div className="mn-title">
@@ -10,10 +12,13 @@ const RelatadeProducts = () => {
         </h2>
       </div>
       <div className="mn-related row">
-        <ProductCard listView={false} productData={productData} />
-        <ProductCard listView={false} productData={productData} />
-        <ProductCard listView={false} productData={productData} />
-        <ProductCard listView={false} productData={productData} />
+        {productData?.products.slice(0, 4).map((product) => (
+          <ProductCard
+            key={product.id}
+            listView={false}
+            productData={product}
+          />
+        ))}
       </div>
     </section>
   );

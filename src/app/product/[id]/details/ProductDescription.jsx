@@ -1,64 +1,64 @@
-import React from "react";
+"use client";
+import { addToCart, isInCart } from "@/lib/cart";
+import React, { useState } from "react";
 
 const ProductDescription = ({ product }) => {
+  const {
+    id,
+    title,
+    rating,
+    availabilityStatus,
+    sku,
+    price,
+    discountPercentage,
+    description,
+  } = product;
+
+  const [qty, setQty] = useState(1);
+  const [message, setMessage] = useState("");
+
+  const handleAddToCart = () => {
+    const result = addToCart(id, qty);
+    setMessage(result.message);
+  };
+
   return (
     <div className="single-pro-content">
-      <h5 className="mn-single-title">
-        Mantu Women's Solid Slim Fit Classic Round Neck cotton fabric T-Shirt.
-      </h5>
+      <h5 className="mn-single-title">{title}</h5>
       <div className="mn-single-rating-wrap">
         <div className="mn-single-rating mn-pro-rating">
-          <i className="ri-star-fill"></i>
-          <i className="ri-star-fill"></i>
-          <i className="ri-star-fill"></i>
-          <i className="ri-star-fill"></i>
-          <i className="ri-star-fill grey"></i>
+          {[...Array(5)].map((_, i) => (
+            <i
+              key={i}
+              className={`ri-star-fill ${i < Math.round(rating) ? "" : "grey"}`}
+            ></i>
+          ))}
         </div>
         <span className="mn-read-review">
-          |&nbsp;&nbsp;<a href="#mn-spt-nav-review">992 Ratings</a>
+          |&nbsp;&nbsp;<a href="#mn-spt-nav-review">{rating} Ratings</a>
         </span>
       </div>
 
       <div className="mn-single-price-stoke">
         <div className="mn-single-price">
           <div className="final-price">
-            $664.00<span className="price-des">-78%</span>
+            {(price - (price * discountPercentage) / 100).toFixed(2)} TK
+            <span className="price-des">-{discountPercentage}%</span>
           </div>
           <div className="mrp">
-            M.R.P. : <span>$2,999.00</span>
+            M.R.P. : <span>{price} TK</span>
           </div>
         </div>
         <div className="mn-single-stoke">
-          <span className="mn-single-sku">SKU#: WH12</span>
-          <span className="mn-single-ps-title">IN STOCK</span>
+          <span className="mn-single-sku">SKU#: {sku}</span>
+          <span className="mn-single-ps-title">{availabilityStatus}</span>
         </div>
       </div>
 
-      <div className="mn-single-desc">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1990.
-      </div>
-
-      <div className="mn-single-list">
-        <ul>
-          <li>
-            <strong>Closure :</strong> Hook & Loop
-          </li>
-          <li>
-            <strong>Sole :</strong> Polyvinyl Chloride
-          </li>
-          <li>
-            <strong>Width :</strong> Medium
-          </li>
-          <li>
-            <strong>Outer Material :</strong> A-Grade Standard Quality
-          </li>
-        </ul>
-      </div>
+      <div className="mn-single-desc">{description}</div>
 
       <div className="mn-pro-variation">
-        <div className="mn-pro-variation-inner mn-pro-variation-size m-b-24">
+        {/* <div className="mn-pro-variation-inner mn-pro-variation-size m-b-24">
           <span>Size</span>
           <div className="mn-pro-variation-content">
             <ul>
@@ -76,26 +76,37 @@ const ProductDescription = ({ product }) => {
               </li>
             </ul>
           </div>
-        </div>
-        <div className="mn-pro-variation-inner mn-pro-variation-color">
+        </div> */}
+        {/* <div className="mn-pro-variation-inner mn-pro-variation-color">
           <span>Colors</span>
           <div className="mn-pro-variation-content">
             <ul>
               <li className="active">
-                {/* <span style="background-color:#1b4a87"></span> */}
+                <span style="background-color:#1b4a87"></span>
               </li>
             </ul>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="mn-single-qty">
         <div className="qty-plus-minus">
-          <input className="qty-input" type="text" name="ms_qtybtn" value="1" />
+          <input
+            className="qty-input"
+            type="number"
+            name="ms_qtybtn"
+            min="1"
+            value={qty}
+            onChange={(e) => setQty(Number(e.target.value))}
+          />
         </div>
         <div className="mn-btns">
           <div className="mn-single-cart">
-            <button className="btn btn-primary mn-btn-2 mn-add-cart">
-              <span>Add To Cart</span>
+            <button
+              className="btn btn-primary mn-btn-2 mn-add-cart"
+              onClick={handleAddToCart}
+              disabled={isInCart(id)}
+            >
+              <span>{isInCart(id) ? "Already in Cart" : "Add To Cart"}</span>
             </button>
           </div>
           <div className="mn-single-wishlist">
